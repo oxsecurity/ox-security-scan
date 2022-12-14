@@ -1,0 +1,40 @@
+name: "OX Security Scan"
+description: "OX Security Scan as part of your GitHub Actions workflow."
+branding:
+  icon: check-circle
+  color: green
+inputs:
+  ox_host_url:
+    description: 'OX Security application deployment URL.'
+    required: false
+    default: "https://api.cloud.ox.security"
+  ox_api_key:
+    description: 'API key generated in the OX Security application.'
+    required: true
+  ox_scan_full_branch:
+    description: 'To scan the entire branch and not only the latest introduced commits, set to `true`.'
+    required: false
+    default: "false"
+  ox_override_blocking:
+    description: 'To override a step failure on a blocking issue, set to `true`.'
+    required: false
+    default: "false"
+  ox_timeout:
+    description: 'Timeout in minutes after which the OX Security scan will be canceled. If a timeout occurs, step failure will depend on the value of `ox_fail_on_timeout` option.'
+    required: false
+    default: "20"
+  ox_fail_on_timeout:
+    description: 'To have a scan timeout cause a step failure, set to `true`.'
+    required: false
+    default: "false"
+  ox_fail_on_error:
+    description: 'To have an error (i.e. network, infrastructure) cause a step failure, set to `true`.'
+    required: false
+    default: "false"
+  github_repository_id:
+    description: 'Repository ID set from context. Do not override.'
+    required: false
+    default: ${{ github.repository_id }}
+runs:
+  using: "docker"
+  image: "docker://oxsecurity/ox-block-mode:latest"
