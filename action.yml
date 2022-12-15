@@ -37,4 +37,4 @@ inputs:
     default: ${{ github.repository_id }}
 runs:
   using: "docker"
-  image: "docker://oxsecurity/ox-block-mode:latest"
+  image: "docker://oxsecurity/ox-block-mode:beta"
