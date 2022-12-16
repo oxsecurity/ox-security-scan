@@ -1,6 +1,6 @@
 # OX Security Scan GitHub Action
 
-A [GitHub Action](https://github.com/features/actions) for using [OX Security](https://www.ox.security) to scan for vulnerabilities in your software projects. Scans include searching for secrets, SAST issues, SCA and Open Source dependecy issues, IaC issues, etc. Scans can be configured to alert on or fail the pipeline based on security policies. Security policies can be configured per repository in the [OX Security application](https://app.ox.security).
+A [GitHub Action](https://github.com/features/actions) for using [OX Security](https://www.ox.security) to scan for vulnerabilities in your software projects. Scans include searching for secrets, SAST issues, SCA and Open Source dependecy issues, IaC issues, etc. Scans can be configured to highlight critical issues or automatically block risks introduced into the codebase as part of your pipeline based on security policies. Security policies can be configured per repository in the [OX Security application](https://app.ox.security).
 
 If you want to learn more, contact us at <support@ox.security>.
 
