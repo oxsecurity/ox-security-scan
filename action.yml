@@ -35,6 +35,10 @@ inputs:
     description: 'Repository ID set from context. Do not override.'
     required: false
     default: ${{ github.repository_id }}
+  github_repository_url:
+    description: 'Repository URL set from context. Do not override.'
+    required: false
+    default: ${{ github.repositoryUrl }}
 runs:
   using: "docker"
   image: "docker://oxsecurity/ox-block-mode:latest"
