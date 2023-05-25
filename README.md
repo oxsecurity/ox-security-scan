@@ -41,19 +41,6 @@ Once you login to your [OX Security](https://app.ox.security) account, an API ke
 
 You can modify the action's behavior with the inputs listed below. Workflow files must use the `with` keyword to set an input value. For more information about the `with` syntax, see ["Workflow syntax for GitHub Actions"](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepswith).
 
-#### `ox_scan_full_branch`
-
-Default: `false`
-
-To scan the entire branch and not only the latest introduced commits, set `ox_scan_full_branch` to `true`. Does not affect pull request scans.
-
-```yaml
-with:
-  ox_scan_full_branch: true
-```
-
----
-
 #### `ox_override_blocking`
 
 Default: `false`
