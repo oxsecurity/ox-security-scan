@@ -39,6 +39,10 @@ inputs:
     description: 'Repository URL set from context. Do not override.'
     required: false
     default: ${{ github.repositoryUrl }}
+  github_pull_request_head_sha:
+    description: 'Commit ID for the last commit to the head branch of the pull request set from context. Do not override.'
+    required: false
+    default: ${{ github.event.pull_request.head.sha }}
 runs:
   using: "docker"
   image: "docker://oxsecurity/ox-block-mode:latest"
