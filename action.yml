@@ -22,15 +22,12 @@ inputs:
   ox_timeout:
     description: 'Timeout in minutes after which the OX Security scan will be canceled. If a timeout occurs, step failure will depend on the value of `ox_fail_on_timeout` option.'
     required: false
-    default: "20"
   ox_fail_on_timeout:
     description: 'To have a scan timeout cause a step failure, set to `true`.'
     required: false
-    default: "false"
   ox_fail_on_error:
     description: 'To have an error (i.e. network, infrastructure) cause a step failure, set to `true`.'
     required: false
-    default: "false"
   github_repository_id:
     description: 'Repository ID set from context. Do not override.'
     required: false
