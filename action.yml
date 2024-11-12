@@ -25,6 +25,10 @@ inputs:
   ox_fail_on_timeout:
     description: 'To have a scan timeout cause a step failure, set to `true`.'
     required: false
+  ox_disable_ssl_validation:
+    description: 'If you have an on premise OX Security application deployment and you are using a self-signed certificate, set to `true`.'
+    required: false
+    default: "false"
   ox_fail_on_error:
     description: 'To have an error (i.e. network, infrastructure) cause a step failure, set to `true`.'
     required: false
